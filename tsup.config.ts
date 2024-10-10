@@ -7,4 +7,5 @@ export default defineConfig({
 	minify: true,
 	format: ['cjs'],
 	tsconfig: './tsconfig.npx.json',
+	outDir: './bin',
 })
