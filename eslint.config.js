@@ -18,7 +18,7 @@ export default tseslint.config({
 			},
 		],
 	},
-	files: ['src/**/*.ts'],
+	files: ['src/**/*.ts', 'npx/**/*.ts'],
 	plugins: {
 		'unused-imports': unusedImports,
 	},
