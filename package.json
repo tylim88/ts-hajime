@@ -1,7 +1,7 @@
 {
 	"name": "ts-hajime",
-	"description": "coming soon",
-	"version": "0.0.0",
+	"description": "Delightfully bootstraps TypeScript npm libraries.",
+	"version": "0.0.1",
 	"scripts": {
 		"reset": "rm -rf node_modules && npm i",
 		"build": "rm -rf dist && pkgroll",
