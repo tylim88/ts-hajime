@@ -1,1 +1,3 @@
-# TS-Hajime
+# TS-Hajime 🌸
+
+Delightfully bootstraps TypeScript npm libraries.
