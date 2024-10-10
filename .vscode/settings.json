@@ -3,7 +3,10 @@
 	"explorer.fileNesting.patterns": {
 		"package.json": "package-lock.json",
 		"*.ts": "$(capture).*.ts",
-		"tsconfig.json": "tsconfig.*.json"
+		"tsconfig.json": "tsconfig.*.json",
+		"README.md": "LICENSE",
+		".gitignore": ".npmignore",
+		"eslint.config.js": ".prettierrc.cjs"
 	},
 	"typescript.tsdk": "./node_modules/typescript/lib",
 	"editor.codeActionsOnSave": {
