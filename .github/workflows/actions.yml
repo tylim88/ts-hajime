@@ -1,5 +1,5 @@
 name: all-pull-request
-on: [pull_request]
+on: [push]
 jobs:
   build_test:
     runs-on: ubuntu-latest
