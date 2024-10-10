@@ -4,5 +4,8 @@
 		"package.json": "package-lock.json",
 		"*.ts": "$(capture).*.ts"
 	},
-	"typescript.tsdk": "./node_modules/typescript/lib"
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit"
+	}
 }

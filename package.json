@@ -5,7 +5,7 @@
 		"reset": "rm -rf node_modules && npm i",
 		"build": "rm -rf dist && pkgroll",
 		"test": "vitest",
-		"lint": "eslint --flag unstable_ts_config --fix",
+		"lint": "eslint --fix",
 		"tsc": "tsc"
 	},
 	"type": "module",
@@ -32,7 +32,7 @@
 		"eslint": "^9.12.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
-		"jiti": "^2.3.3",
+		"eslint-plugin-unused-imports": "^4.1.4",
 		"pkgroll": "^2.5.0",
 		"prettier": "^3.3.3",
 		"typescript": "^5.6.3",
