@@ -1,9 +1,20 @@
-/dist
-/.vscode
-/.github
+# source code
+/npx
+/src
+
+# modules
 /node_modules
+
+# config
+/vitest.config.ts
+/tsup.config.ts
+
+# editor
+/tsconfig.json
+/tsconfig.npx.json
 /.prettierrc.cjs
 /.eslint.config.js
-/tsconfig.json
-/src
-/vitest.config.ts
+/.vscode
+
+# CI/CD
+/.github

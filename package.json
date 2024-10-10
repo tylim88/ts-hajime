@@ -4,10 +4,13 @@
 	"version": "0.0.1",
 	"scripts": {
 		"reset": "rm -rf node_modules && npm i",
-		"build": "rm -rf dist && pkgroll",
+		"build": "rm -rf dist && pkgroll && tsup",
 		"test": "vitest",
 		"lint": "eslint --fix",
 		"tsc": "tsc"
+	},
+	"bin": {
+		"ts-hajime": "./bin/scripts.js"
 	},
 	"type": "module",
 	"main": "./dist/index.cjs",
@@ -42,6 +45,7 @@
 		"eslint-plugin-unused-imports": "^4.1.4",
 		"pkgroll": "^2.5.0",
 		"prettier": "^3.3.3",
+		"tsup": "^8.3.0",
 		"typescript": "^5.6.3",
 		"typescript-eslint": "^8.8.1",
 		"vitest": "^2.1.2"
