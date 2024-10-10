@@ -1,7 +1,9 @@
 /dist
 /.vscode
+/.github
 /node_modules
 /.prettierrc.cjs
 /.eslint.config.js
 /tsconfig.json
 /src
+/vitest.config.ts
