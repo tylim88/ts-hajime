@@ -4,3 +4,6 @@
 #output
 /dist
 /bin
+
+#misc
+.DS_Store
