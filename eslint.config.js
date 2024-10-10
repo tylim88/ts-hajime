@@ -25,6 +25,6 @@ export default tseslint.config({
 	extends: [
 		eslint.configs.recommended,
 		...tseslint.configs.recommended,
-		eslintPluginPrettierRecommended, // must be the last plugin
+		eslintPluginPrettierRecommended, // must be the last recommendation
 	],
 })
