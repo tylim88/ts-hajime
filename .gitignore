@@ -1,9 +1,9 @@
 # modules
 /node_modules
 
-#output
+# output
 /dist
 /bin
 
-#misc
+# misc
 .DS_Store

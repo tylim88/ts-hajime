@@ -18,3 +18,6 @@
 
 # CI/CD
 /.github
+
+# misc
+.DS_Store

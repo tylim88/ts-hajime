@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"reset": "rm -rf node_modules && npm i",
-		"build": "rm -rf dist && pkgroll && tsup",
+		"build": "rm -rf dist && pkgroll --minify && tsup",
 		"test": "vitest",
 		"lint": "eslint --fix",
 		"tsc": "tsc"
