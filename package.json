@@ -1,0 +1,42 @@
+{
+	"name": "ts-hajime",
+	"version": "0.0.0",
+	"scripts": {
+		"reset": "rm -rf node_modules && npm i",
+		"build": "rm -rf dist && pkgroll",
+		"test": "vitest",
+		"lint": "eslint --flag unstable_ts_config --fix",
+		"tsc": "tsc"
+	},
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.cts",
+	"exports": {
+		"require": {
+			"types": "./dist/index.d.cts",
+			"default": "./dist/index.cjs"
+		},
+		"import": {
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
+		}
+	},
+	"author": "tylim",
+	"license": "MIT",
+	"description": "coming soon",
+	"devDependencies": {
+		"@eslint/js": "^9.12.0",
+		"@types/eslint__js": "^8.42.3",
+		"@vitest/coverage-v8": "^2.1.2",
+		"eslint": "^9.12.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"jiti": "^2.3.3",
+		"pkgroll": "^2.5.0",
+		"prettier": "^3.3.3",
+		"typescript": "^5.6.3",
+		"typescript-eslint": "^8.8.1",
+		"vitest": "^2.1.2"
+	}
+}

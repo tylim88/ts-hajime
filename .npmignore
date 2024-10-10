@@ -1,0 +1,7 @@
+/dist
+/.vscode
+/node_modules
+/.prettierrc.cjs
+/.eslint.config.js
+/tsconfig.json
+/src

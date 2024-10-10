@@ -1,0 +1,8 @@
+{
+	"editor.formatOnSave": true,
+	"explorer.fileNesting.patterns": {
+		"package.json": "package-lock.json",
+		"*.ts": "$(capture).*.ts"
+	},
+	"typescript.tsdk": "./node_modules/typescript/lib"
+}
