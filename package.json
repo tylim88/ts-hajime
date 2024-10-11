@@ -13,6 +13,10 @@
 	"bin": {
 		"ts-hajime": "./bin/index.cjs"
 	},
+	"files": [
+		"./bin",
+		"./template"
+	],
 	"type": "module",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.mjs",
