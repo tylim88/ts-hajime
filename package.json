@@ -1,7 +1,7 @@
 {
 	"name": "ts-hajime",
 	"description": "Delightfully bootstraps TypeScript npm libraries.",
-	"version": "0.0.1",
+	"version": "0.0.5",
 	"scripts": {
 		"reset": "rm -rf node_modules && npm i",
 		"build": "rm -rf dist && pkgroll --minify && tsup",
@@ -10,7 +10,7 @@
 		"tsc": "tsc"
 	},
 	"bin": {
-		"ts-hajime": "./bin/scripts.js"
+		"ts-hajime": "./bin/scripts.cjs"
 	},
 	"type": "module",
 	"main": "./dist/index.cjs",

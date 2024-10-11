@@ -13,7 +13,7 @@
 /tsconfig.json
 /tsconfig.npx.json
 /.prettierrc.cjs
-/.eslint.config.js
+/eslint.config.js
 /.vscode
 
 # CI/CD

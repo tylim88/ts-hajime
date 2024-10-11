@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-	entry: ['npx/bin.ts'],
+	entry: ['npx/scripts.ts'],
 	clean: true,
 	minify: true,
 	format: ['cjs'],
