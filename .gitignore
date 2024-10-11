@@ -5,5 +5,8 @@
 /dist
 /bin
 
+# test
+/coverage
+
 # misc
 .DS_Store

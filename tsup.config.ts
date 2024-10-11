@@ -5,6 +5,6 @@ export default defineConfig({
 	clean: true,
 	minify: true,
 	format: ['cjs'],
-	tsconfig: './tsconfig.npx.json',
-	outDir: './bin',
+	tsconfig: 'tsconfig.npx.json',
+	outDir: 'bin',
 })

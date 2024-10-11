@@ -16,6 +16,9 @@
 /eslint.config.js
 /.vscode
 
+# test
+/coverage
+
 # CI/CD
 /.github
 
