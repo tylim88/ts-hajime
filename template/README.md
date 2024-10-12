@@ -1,5 +1,3 @@
-# TS-Hajime 🌸
+# my-app
 
-Delightfully bootstraps TypeScript npm libraries.
-
-`git clone https://github.com/tylim88/ts-hajime.git`
+my-description

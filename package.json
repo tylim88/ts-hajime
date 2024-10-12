@@ -1,14 +1,15 @@
 {
 	"name": "ts-hajime",
 	"description": "Delightfully bootstraps TypeScript npm libraries.",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"scripts": {
 		"reset": "rm -rf node_modules && npm i",
 		"build": "rm -rf dist && pkgroll --minify && tsup",
 		"test": "vitest",
 		"lint": "eslint --fix",
 		"tsc": "tsc",
-		"npx": "tsx npx"
+		"npx": "tsx npx",
+		"prepare": "husky"
 	},
 	"bin": {
 		"ts-hajime": "./bin/index.cjs"
@@ -16,9 +17,6 @@
 	"files": [
 		"./bin",
 		"./template"
-	],
-	"pre-commit": [
-		"lint-staged"
 	],
 	"lint-staged": {
 		"*": "npm run lint"
@@ -40,6 +38,7 @@
 	"devDependencies": {
 		"@eslint/js": "^9.12.0",
 		"@types/eslint__js": "^8.42.3",
+		"@types/fs-extra": "^11.0.4",
 		"@vitest/coverage-v8": "^2.1.2",
 		"cleye": "^1.3.2",
 		"eslint": "^9.12.0",
@@ -47,9 +46,10 @@
 		"eslint-plugin-prettier": "^5.2.1",
 		"eslint-plugin-unused-imports": "^4.1.4",
 		"execa": "^9.4.0",
+		"fs-extra": "^11.2.0",
+		"husky": "^9.1.6",
 		"lint-staged": "^15.2.10",
 		"pkgroll": "^2.5.0",
-		"pre-commit": "^1.2.2",
 		"prettier": "^3.3.3",
 		"tsup": "^8.3.0",
 		"tsx": "^4.19.1",

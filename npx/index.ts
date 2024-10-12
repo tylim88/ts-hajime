@@ -1,9 +1,22 @@
 #!/usr/bin/env node
 import { cli } from 'cleye'
-import fs from 'fs'
-const argv = cli({
-	name: 'ts-hajime',
-	parameters: ['<app name>'],
-})
+import fs from 'fs-extra'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { execaSync } from 'execa'
 
-const name = argv._.appName
+try {
+	const argv = cli({
+		name: 'ts-hajime',
+		parameters: ['<app name>'],
+	})
+	const __filename = fileURLToPath(import.meta.url)
+	const __dirname = path.dirname(__filename)
+	fs.copySync(
+		path.resolve(__dirname, '../template'),
+		path.resolve(process.cwd(), argv._.appName),
+	)
+	execaSync('npm', ['i'], { cwd: argv._.appName })
+} catch (e) {
+	console.error(e)
+}

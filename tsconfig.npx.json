@@ -2,7 +2,7 @@
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
 		"paths": {
-			"#/*": ["npx/*"]
+			"@/*": ["npx/*"]
 		}
 	},
 	"include": ["npx"]
