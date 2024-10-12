@@ -3,7 +3,7 @@ import { cli } from 'cleye'
 
 // Parse argv
 const argv = cli({
-	name: 'greet.js',
+	name: 'my-app',
 
 	// Define parameters
 	parameters: [

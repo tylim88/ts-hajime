@@ -8,8 +8,5 @@
 		".gitignore": ".npmignore",
 		"eslint.config.js": ".prettierrc.cjs"
 	},
-	"typescript.tsdk": "./node_modules/typescript/lib",
-	"editor.codeActionsOnSave": {
-		"source.fixAll": "explicit"
-	}
+	"typescript.tsdk": "./node_modules/typescript/lib"
 }
