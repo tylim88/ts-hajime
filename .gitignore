@@ -1,12 +1,12 @@
 # modules
-/node_modules
+**/node_modules
 
 # output
-/dist
-/bin
+**/dist
+**/bin
 
 # test
-/coverage
+**/coverage
 
 # misc
-.DS_Store
+**/.DS_Store

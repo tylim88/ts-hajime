@@ -4,7 +4,11 @@ export default defineConfig({
 	test: {
 		coverage: {
 			enabled: true,
-			exclude: [...(configDefaults.coverage.exclude || []), 'bin'],
+			exclude: [
+				...(configDefaults.coverage.exclude || []),
+				'bin',
+				'**/index.ts',
+			],
 		},
 	},
 })
