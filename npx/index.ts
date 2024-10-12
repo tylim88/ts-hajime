@@ -17,6 +17,7 @@ try {
 		path.resolve(process.cwd(), argv._.appName),
 	)
 	execaSync('npm', ['i'], { cwd: argv._.appName })
+	console.log('done, have fun!')
 } catch (e) {
 	console.error(e)
 }

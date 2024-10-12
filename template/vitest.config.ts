@@ -2,13 +2,11 @@ import { defineConfig, configDefaults } from 'vitest/config'
 
 export default defineConfig({
 	test: {
+		include: ['src/**.test.ts', 'npx/**.test.ts'],
 		coverage: {
 			enabled: true,
-			exclude: [
-				...(configDefaults.coverage.exclude || []),
-				'bin',
-				'**/index.ts',
-			],
+			include: ['src/**', 'npx/**'],
+			exclude: [...(configDefaults.coverage.exclude || []), '**/index.ts'],
 		},
 	},
 })
