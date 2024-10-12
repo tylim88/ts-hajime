@@ -12,10 +12,12 @@ try {
 	})
 	const __filename = fileURLToPath(import.meta.url)
 	const __dirname = path.dirname(__filename)
+	console.log('copying...')
 	fs.copySync(
 		path.resolve(__dirname, '../template'),
 		path.resolve(process.cwd(), argv._.appName),
 	)
+	console.log('installing node modules...')
 	execaSync('npm', ['i'], { cwd: argv._.appName })
 	console.log('done, have fun!')
 } catch (e) {
