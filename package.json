@@ -1,15 +1,15 @@
 {
 	"name": "ts-hajime",
 	"description": "Delightfully bootstraps TypeScript npm libraries.",
-	"version": "0.0.8",
+	"version": "0.0.12",
 	"scripts": {
 		"reset": "rm -rf node_modules && npm i",
+		"prepublishOnly": "npm run build",
 		"build": "rm -rf dist && pkgroll --minify && tsup",
 		"test": "vitest",
 		"lint": "eslint --fix",
 		"tsc": "tsc",
-		"npx": "tsx npx",
-		"prepare": "husky"
+		"npx": "tsx npx"
 	},
 	"bin": {
 		"ts-hajime": "./bin/index.cjs"

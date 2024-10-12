@@ -3,12 +3,12 @@
 	"description": "my-description",
 	"version": "0.0.0",
 	"scripts": {
+		"prepublishOnly": "npm run build",
 		"build": "rm -rf dist && pkgroll --minify && tsup",
 		"test": "vitest",
 		"lint": "eslint --fix",
 		"tsc": "tsc",
-		"npx": "tsx npx",
-		"prepare": "husky"
+		"npx": "tsx npx"
 	},
 	"bin": {
 		"my-app": "./bin/index.cjs"
