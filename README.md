@@ -25,9 +25,7 @@ Effortlessly bootstrap strongly-typed TypeScript npm libraries with minimal conf
 
 Here’s what your project structure will look like:
 
-<div style="text-align: center;">
-   ![Folder Structure](./img.png)
-</div>
+![Folder Structure](./img.png)
 
 2. Replace all occurrences of `my-app` with your app’s name, and `my-description` with a description.
 
