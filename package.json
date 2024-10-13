@@ -1,11 +1,11 @@
 {
 	"name": "ts-hajime",
 	"description": "Delightfully bootstraps TypeScript npm libraries.",
-	"version": "0.0.21",
+	"version": "0.0.22",
 	"scripts": {
 		"reset": "rm -rf node_modules && npm i",
 		"prepublishOnly": "npm run build",
-		"build": "rm -rf dist && pkgroll --minify && tsup",
+		"build": "pkgroll --clean-dist --minify && tsup",
 		"test": "vitest",
 		"lint": "eslint --fix",
 		"tsc": "tsc",

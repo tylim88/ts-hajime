@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"scripts": {
 		"prepublishOnly": "npm run build",
-		"build": "rm -rf dist && pkgroll --minify && tsup",
+		"build": "pkgroll --clean-dist --minify && tsup",
 		"test": "vitest",
 		"lint": "eslint --fix",
 		"tsc": "tsc",
