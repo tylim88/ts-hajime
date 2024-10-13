@@ -2,8 +2,6 @@
 
 Effortlessly bootstrap strongly-typed TypeScript npm libraries with minimal configuration and a focus on developer experience.
 
-![Folder Structure](./img.png)
-
 ## 🌟 Features
 
 - **Minimal Setup & Visual Clarity**: Enjoy sensible defaults that keep your project setup clean.
@@ -24,6 +22,12 @@ Effortlessly bootstrap strongly-typed TypeScript npm libraries with minimal conf
    ```bash
    npx ts-hajime your-app-name-here
    ```
+
+Here’s what your project structure will look like:
+
+<div style="text-align: center;">
+   ![Folder Structure](./img.png)
+</div>
 
 2. Replace all occurrences of `my-app` with your app’s name, and `my-description` with a description.
 
