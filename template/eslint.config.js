@@ -6,6 +6,10 @@ import unusedImports from 'eslint-plugin-unused-imports'
 
 export default tseslint.config({
 	rules: {
+		'@typescript-eslint/no-unused-expressions': [
+			'error',
+			{ allowTaggedTemplates: true },
+		],
 		'@typescript-eslint/no-unused-vars': 'off',
 		'unused-imports/no-unused-imports': 'warn',
 		'unused-imports/no-unused-vars': [
