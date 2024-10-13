@@ -1,7 +1,7 @@
 {
 	"name": "ts-hajime",
 	"description": "Delightfully bootstraps TypeScript npm libraries.",
-	"version": "0.0.17",
+	"version": "0.0.18",
 	"scripts": {
 		"reset": "rm -rf node_modules && npm i",
 		"prepublishOnly": "npm run build",
@@ -64,5 +64,13 @@
 		"url": "https://github.com/tylim88/ts-hajime/issues"
 	},
 	"author": "tylim",
-	"license": "MIT"
+	"license": "MIT",
+	"keywords": [
+		"typescript",
+		"bootstrap",
+		"library",
+		"starter",
+		"scaffold",
+		"template"
+	]
 }
