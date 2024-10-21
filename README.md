@@ -40,3 +40,7 @@ Here’s what your project structure will look like:
   _(Modify the `npx` script in `package.json` to suit your project requirements.)_
 
 Start your TypeScript library development journey with a delightful, optimized, and flexible setup. Enjoy coding! 🌸
+
+## 🚧 Roadmap
+
+- replace `cleye` with `cac`
