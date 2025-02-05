@@ -5,7 +5,7 @@ Effortlessly bootstrap strongly-typed TypeScript npm libraries with minimal conf
 ## 🌟 Features
 
 - **Minimal Setup & Visual Clarity**: Enjoy sensible defaults that keep your project setup clean.
-- **Developer-Centric**: Built with tools like `pkgroll`, `tsx`, `tsup`, `vitest`, and `clieye`.
+- **Developer-Centric**: Built with tools like `pkgroll`, `tsx`, `tsup`, `vitest`, and `cac`.
 - **Comprehensive Configurations**:
   - Preconfigured `tsconfig`, `eslint`, `vitest`, `prettier`, `package.json`, and `.gitignore` files.
   - Ready-to-use GitHub Actions, pre-commit hooks, and npm scripts.
@@ -39,8 +39,4 @@ Here’s what your project structure will look like:
 - **Try `npx` Command Locally**: `npm run npx something`  
   _(Modify the `npx` script in `package.json` to suit your project requirements.)_
 
-Start your TypeScript library development journey with a delightful, optimized, and flexible setup. Enjoy coding! 🌸
-
-## 🚧 Roadmap
-
-- replace `cleye` with `cac`
+Enjoy coding! 🌸
