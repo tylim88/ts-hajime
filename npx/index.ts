@@ -21,5 +21,8 @@ const { args } = cli.parse()
 console.log('Copying...')
 execaSync`cp -r ${resolve(getDirname(), '../template')} ${resolve(process.cwd(), args[0])}`
 console.log('Copy complete! Installing node modules...')
-execaSync('npm', ['i'], { cwd: args[0] })
+execaSync(`cd ${resolve(process.cwd(), args[0])} && npm run setup`, {
+	shell: true,
+	stdio: 'inherit',
+})
 console.log('Installation complete! Have fun!')

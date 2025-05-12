@@ -3,21 +3,25 @@
 	"description": "my-description",
 	"version": "0.0.0",
 	"scripts": {
+		"setup": "rm -rf node_modules && npm i && git init && husky",
 		"prepublishOnly": "npm run build",
 		"build": "pkgroll --clean-dist && tsup",
 		"test": "vitest",
 		"lint": "eslint --fix",
-		"tsc": "tsc",
 		"npx": "tsx npx"
 	},
 	"bin": {
 		"my-app": "./bin/index.cjs"
 	},
 	"files": [
-		"./bin"
+		"bin",
+		"dist"
 	],
 	"lint-staged": {
-		"*": "npm run lint"
+		"*.{ts,tsx}": [
+			"npm run lint",
+			"npx tsc"
+		]
 	},
 	"type": "module",
 	"main": "./dist/index.cjs",
