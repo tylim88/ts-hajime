@@ -7,7 +7,8 @@ Effortlessly bootstrap strongly-typed TypeScript npm libraries with minimal conf
 - **Minimal Setup & Visual Clarity**: Enjoy sensible defaults that keep your project setup clean.
 - **Developer-Centric**: Built with tools like `pkgroll`, `tsx`, `tsup`, `vitest`, and `cac`.
 - **Comprehensive Configurations**:
-  - Preconfigured `tsconfig`, `eslint`, `vitest`, `prettier`, `package.json`, and `.gitignore` files.
+  - Use `biome` instead of `eslint` and `prettier` for linting and formatting. (please install `biome` extension in your editor)
+  - Preconfigured `tsconfig`, `vitest`, `package.json`, and `.gitignore` files.
   - Ready-to-use GitHub Actions, pre-commit hooks, and npm scripts.
   - Examples and tests included for both library code and `npx` commands.
 - **TypeScript npx Commands**: Write `npx` commands directly in TypeScript.

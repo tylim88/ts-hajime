@@ -1,17 +1,16 @@
 #!/usr/bin/env node
-import { dirname, resolve } from 'path'
-import { fileURLToPath } from 'url'
-import { execaSync } from 'execa'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { cac } from 'cac'
+import { execaSync } from 'execa'
 
 const cli = cac('ts-hajime')
 
 const getDirname = () => {
 	if (typeof __dirname === 'undefined') {
 		return dirname(fileURLToPath(import.meta.url))
-	} else {
-		return __dirname
 	}
+	return __dirname
 }
 
 cli.command('ts-hajime <app-name>', 'create a project')
