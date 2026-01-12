@@ -1,7 +1,7 @@
 {
 	"name": "ts-hajime",
 	"description": "Delightfully bootstraps TypeScript npm libraries.",
-	"version": "0.3.2",
+	"version": "0.3.3",
 	"scripts": {
 		"setup": "rm -rf node_modules && npm i && husky",
 		"prepublishOnly": "npm run build",
