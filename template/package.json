@@ -15,7 +15,7 @@
 	},
 	"files": ["bin", "dist"],
 	"lint-staged": {
-		"*.{ts}": ["npm run lint"]
+		"*.ts": ["npm run lint"]
 	},
 	"type": "module",
 	"main": "./dist/index.cjs",
