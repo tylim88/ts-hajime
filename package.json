@@ -15,7 +15,7 @@
 	},
 	"files": ["./bin", "./template", "./template/.gitignore"],
 	"lint-staged": {
-		"*": ["npm run lint"]
+		"*.{ts}": ["npm run lint"]
 	},
 	"type": "module",
 	"main": "./dist/index.cjs",
