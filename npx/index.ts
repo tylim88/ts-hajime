@@ -60,7 +60,7 @@ writeFileSync(
 p.advance(3, 'Copy complete!')
 p.advance(5, 'Installing node modules...')
 await execa(
-	`cd ${resolve(process.cwd(), projectName)} && npm run setup && mv biome.jsonc_ biome.jsonc && mv .gitignore_ .gitignore`,
+	`cd ${resolve(process.cwd(), projectName)} && npm run setup && mv .gitignore_ .gitignore`,
 	{
 		shell: true,
 	},

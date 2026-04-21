@@ -11,6 +11,7 @@ Effortlessly bootstrap strongly-typed TypeScript npm libraries with minimal conf
   - Preconfigured `tsconfig`, `vitest`, `package.json`, and `.gitignore` files.
   - Ready-to-use GitHub Actions, pre-commit hooks, and npm scripts.
   - Examples and tests included for both library code and `npx` commands.
+- **ESM & CJS Support**: Outputs both ESM and CJS modules.
 - **Optimized for VSCode**: Pre-configured with file nesting, auto-prettify on save, and a specified TypeScript TSDK path.
 - **Fully Customizable**: Exposed configurations allow for complete customization to fit your needs.
 
