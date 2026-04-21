@@ -11,5 +11,15 @@
 				"organizeImports": "off"
 			}
 		}
+	},
+	"files": {
+		"includes": [
+			"**",
+			"!!dist",
+			"!!node_modules",
+			"!!build",
+			"!!coverage",
+			"!!bin"
+		]
 	}
 }
