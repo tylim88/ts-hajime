@@ -7,15 +7,20 @@
 		"prepublishOnly": "npm run build",
 		"build": "pkgroll --clean-dist && tsup",
 		"test": "vitest",
-		"lint": "npx @biomejs/biome check --write",
-		"npx": "tsx npx"
+		"npx": "tsx npx",
+		"lint": "npx @biomejs/biome check --write"
 	},
 	"bin": {
 		"my-app": "./bin/index.cjs"
 	},
-	"files": ["bin", "dist"],
+	"files": [
+		"bin",
+		"dist"
+	],
 	"lint-staged": {
-		"*": ["npm run lint"]
+		"*": [
+			"npm run lint"
+		]
 	},
 	"type": "module",
 	"main": "./dist/index.cjs",
@@ -32,17 +37,17 @@
 		}
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@vitest/coverage-v8": "^2.1.2",
-		"cac": "^6.7.14",
-		"execa": "^9.4.0",
-		"husky": "^9.1.6",
-		"lint-staged": "^15.2.10",
-		"pkgroll": "^2.5.0",
-		"tsup": "^8.3.0",
-		"tsx": "^4.19.1",
-		"typescript": "^5.6.3",
-		"vitest": "^2.1.2"
+		"@biomejs/biome": "^2.4.12",
+		"@clack/prompts": "^1.2.0",
+		"@vitest/coverage-v8": "^4.1.5",
+		"execa": "^9.6.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.4.0",
+		"pkgroll": "^2.27.0",
+		"tsup": "^8.5.1",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3",
+		"vitest": "^4.1.5"
 	},
 	"//": {
 		"//": "please create your own license",

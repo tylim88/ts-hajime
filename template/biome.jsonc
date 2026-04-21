@@ -4,5 +4,12 @@
 			"quoteStyle": "single",
 			"semicolons": "asNeeded"
 		}
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "off"
+			}
+		}
 	}
 }

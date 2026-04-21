@@ -36,7 +36,6 @@ Here’s what your project structure will look like:
 - **Test**: `npm test`
 - **Lint & Fix**: `npm run lint`
 - **Type Check**: `npm run tsc`  
-  _(Note: Type checking is automatically done in GitHub Actions as part of the build step with `pkgroll`.)_
 - **Try `npx` Command Locally**: `npm run npx something`  
   _(Modify the `npx` script in `package.json` to suit your project requirements.)_
 

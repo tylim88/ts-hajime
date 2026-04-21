@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import { cac } from 'cac'
+import { text } from '@clack/prompts'
 
-const cli = cac()
+const name = (await text({
+	message: 'Enter your name',
+	placeholder: 'Red',
+	initialValue: 'Red',
+})) as string
 
-cli.command('GreetingAPP <name>')
-
-const { args } = cli.parse()
-
-console.log(`Hi ${args[0]}!`)
+console.log(`Hi ${name}!`)

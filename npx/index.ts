@@ -1,31 +1,69 @@
 #!/usr/bin/env node
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import { cac } from 'cac'
-import { execaSync } from 'execa'
+import { resolve } from 'node:path'
+import { readFileSync, writeFileSync } from 'node:fs'
+import validatePackageName from 'validate-npm-package-name'
+import { execa } from 'execa'
+import {
+	intro,
+	outro,
+	text,
+	confirm,
+	isCancel,
+	cancel,
+	progress,
+} from '@clack/prompts'
 
-const cli = cac('ts-hajime')
+intro('⭐ Create your ESM Typescript Package')
 
-const getDirname = () => {
-	if (typeof __dirname === 'undefined') {
-		return dirname(fileURLToPath(import.meta.url))
-	}
-	return __dirname
+const projectName = (await text({
+	message: 'Enter your project name',
+	placeholder: 'my-app',
+	initialValue: 'my-app',
+	validate: (value) => {
+		if (!value) return 'invalid npm package name, press backspace to clear'
+		const result = validatePackageName(value)
+		if (!result.validForNewPackages)
+			return (
+				result.errors?.[0] ||
+				'invalid npm package name, press backspace to clear'
+			)
+	},
+})) as string
+
+if (isCancel(projectName)) {
+	cancel('Operation cancelled.')
+	process.exit(0)
 }
 
-cli.command('ts-hajime <app-name>', 'create a project')
+const npxOption = await confirm({
+	message: 'Do you want to setup npx command?',
+})
 
-const { args } = cli.parse()
-
-console.log('Copying...')
-execaSync`cp -r ${resolve(getDirname(), '../template')} ${resolve(process.cwd(), args[0])}`
-console.log('Copy complete! Installing node modules...')
-execaSync(
-	`cd ${resolve(process.cwd(), args[0])} && npm run setup && mv .npmignore .gitignore`,
+if (isCancel(npxOption)) {
+	cancel('Operation cancelled.')
+	process.exit(0)
+}
+const p = progress()
+p.start('Copying template...')
+const destination = resolve(process.cwd(), projectName)
+await execa`cp -r ${resolve(import.meta.dirname, '../template')} ${destination}`
+if (!npxOption) await execa`rm -r ${destination}/npx`
+writeFileSync(
+	`${destination}/package.json`,
+	readFileSync(`${destination}/package.json`)
+		.toString()
+		.replaceAll('my-app', projectName)
+		.split('\n')
+		.filter((line) => npxOption || !line.includes('tsx npx'))
+		.join('\n'),
+)
+p.advance(3, 'Copy complete!')
+p.advance(5, 'Installing node modules...')
+await execa(
+	`cd ${resolve(process.cwd(), projectName)} && npm run setup && mv .gitignore_ .gitignore`,
 	{
 		shell: true,
-		stdio: 'inherit',
 	},
 )
-
-console.log('Installation complete! Have fun!')
+p.stop('Installed!')
+outro('⭐ All done, enjoy!')
