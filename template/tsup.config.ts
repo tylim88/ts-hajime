@@ -7,4 +7,5 @@ export default defineConfig({
 	format: ['esm'],
 	tsconfig: 'tsconfig.npx.json',
 	outDir: 'bin',
+	platform: 'node',
 })

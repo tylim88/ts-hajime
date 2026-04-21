@@ -1,7 +1,7 @@
 {
 	"name": "ts-hajime",
 	"description": "Delightfully bootstraps TypeScript npm libraries.",
-	"version": "0.4.0",
+	"version": "0.4.1",
 	"scripts": {
 		"setup": "rm -rf node_modules && npm i && husky",
 		"prepublishOnly": "npm run build",
@@ -12,7 +12,7 @@
 		"update": "npx npm-check-updates -u && npm i"
 	},
 	"bin": {
-		"ts-hajime": "./bin/index.cjs"
+		"ts-hajime": "./bin/index.js"
 	},
 	"files": [
 		"./bin",
