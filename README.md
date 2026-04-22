@@ -5,7 +5,7 @@ Effortlessly bootstrap strongly-typed TypeScript npm libraries with minimal conf
 ## 🌟 Features
 
 - **Minimal Setup & Visual Clarity**: Enjoy sensible defaults that keep your project setup clean.
-- **Developer-Centric**: Built with tools like `pkgroll`, `tsx`, `tsup`, `vitest`, and `@clack/prompts`.
+- **Developer-Centric**: Built with tools like  `tsx`, `tsup`, `vitest`, and `@clack/prompts`.
 - **Comprehensive Configurations**:
   - Use `biome` instead of `eslint` and `prettier` for linting and formatting. (please install `biome` extension in your editor)
   - Preconfigured `tsconfig`, `vitest`, `package.json`, and `.gitignore` files.

@@ -3,6 +3,7 @@
 	"explorer.fileNesting.patterns": {
 		"package.json": "package-lock.json",
 		"*.ts": "$(capture).*.ts",
+		"*.cjs": "$(capture).*.cts",
 		"tsconfig.json": "tsconfig.*.json",
 		"tsup.config.ts": "tsup.*.ts",
 		"README.md": "LICENSE",

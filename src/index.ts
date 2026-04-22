@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { resolve } from 'node:path'
-import { cp, rm } from 'node:fs/promises'
+import { cp, rm, writeFile, readFile } from 'node:fs/promises'
 import validatePackageName from 'validate-npm-package-name'
 import { execa } from 'execa'
 import {
@@ -66,7 +66,15 @@ import {
 		await rm(`${destination}/tsup.npx.ts`)
 		await rm(`${destination}/tsconfig.npx.json`)
 	}
+	await cp(`${destination}/.gitignore_`, `${destination}/.gitignore`) // npm convert gitignore to npmignore during publish
+	await rm(`${destination}/.gitignore_`)
 	await rm(`${destination}/package.json.npx`)
+	await writeFile(
+		`${destination}/package.json`,
+		(await readFile(`${destination}/package.json`))
+			.toString()
+			.replaceAll('my-app', projectName),
+	)
 	p.advance(3, 'Copy complete!')
 	p.advance(5, 'Installing node modules...')
 	await execa(

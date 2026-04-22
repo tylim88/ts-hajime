@@ -8,7 +8,7 @@
 		"module": "esnext",
 		"forceConsistentCasingInFileNames": true,
 		"esModuleInterop": true,
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noFallthroughCasesInSwitch": true,
