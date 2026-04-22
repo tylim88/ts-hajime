@@ -66,6 +66,8 @@ import {
 		await rm(`${destination}/tsup.npx.ts`)
 		await rm(`${destination}/tsconfig.npx.json`)
 	}
+	await cp(`${destination}/.npmignore`, `${destination}/.gitignore`) // https://stackoverflow.com/a/79929897/5338829
+	await rm(`${destination}/.npmignore`)
 	await rm(`${destination}/package.json.npx`)
 	await writeFile(
 		`${destination}/package.json`,
