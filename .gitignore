@@ -7,7 +7,7 @@
 
 # test
 **/coverage
-my-app
+my-package*
 
 # misc
 **/.DS_Store

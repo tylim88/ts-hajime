@@ -14,12 +14,12 @@ import {
 } from '@clack/prompts'
 
 ;(async () => {
-	intro('⭐ Create your Typescript Package')
+	intro('⭐ Create Your Typescript Package')
 
 	const projectName = (await text({
 		message: 'Enter project name',
-		placeholder: 'my-app',
-		initialValue: 'my-app',
+		placeholder: 'my-package',
+		initialValue: 'my-package',
 		validate: (value) => {
 			if (!value) return 'invalid npm package name, press backspace to clear'
 			const result = validatePackageName(value)
@@ -73,7 +73,7 @@ import {
 		`${destination}/package.json`,
 		(await readFile(`${destination}/package.json`))
 			.toString()
-			.replaceAll('my-app', projectName),
+			.replaceAll('my-package', projectName),
 	)
 	p.advance(3, 'Copy complete!')
 	p.advance(5, 'Installing node modules...')

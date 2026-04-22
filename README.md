@@ -1,39 +1,30 @@
-# TS-Hajime 🌸
+# ts-hajime
 
-Effortlessly bootstrap strongly-typed TypeScript npm libraries with minimal configuration and a focus on developer experience.
+Bootstrap a TypeScript npm library in one command.
 
-## 🌟 Features
+```sh
+npx ts-hajime
+```
 
-- **Minimal Setup & Visual Clarity**: Enjoy sensible defaults that keep your project setup clean.
-- **Developer-Centric**: Built with tools like  `tsx`, `tsup`, `vitest`, and `@clack/prompts`.
-- **Comprehensive Configurations**:
-  - Use `biome` instead of `eslint` and `prettier` for linting and formatting. (please install `biome` extension in your editor)
-  - Preconfigured `tsconfig`, `vitest`, `package.json`, and `.gitignore` files.
-  - Ready-to-use GitHub Actions, pre-commit hooks, and npm scripts.
-  - Examples and tests included for both library code and `npx` commands.
-- **ESM & CJS Support**: Outputs both ESM and CJS modules.
-- **Optimized for VSCode**: Pre-configured with file nesting, auto-prettify on save, and a specified TypeScript TSDK path.
-- **Fully Customizable**: Exposed configurations allow for complete customization to fit your needs.
+## What you get
 
-## 🚀 Getting Started
+- **Biome** for linting and formatting (install the [Biome VSCode extension](https://marketplace.visualstudio.com/items?itemName=biomejs.biome))
+- **tsup** for building — outputs both ESM and CJS
+- **vitest** for testing
+- **tsx** for running TypeScript directly
+- Preconfigured `tsconfig.json`, `vitest.config.ts`, `biome.jsonc`, and `package.json`
+- GitHub Actions CI, Husky pre-commit hooks, and `.gitignore` out of the box
+- Example code for both library exports and `npx` commands
+- VSCode settings: file nesting, format-on-save, TSDK path
 
-1. Run the command below to bootstrap your project:
+![Folder Structure](https://github.com/tylim88/ts-hajime/raw/main/img.png)
 
-   ```bash
-   npx ts-hajime
-   ```
+## Commands
 
-Here’s what your project structure will look like:
-
-![Folder Structure](./img.png)
-
-## ⚙️ Key Commands
-
-- **Build**: `npm run build`
-- **Test**: `npm test`
-- **Lint & Fix**: `npm run lint`
-- **Type Check**: `npm run tsc`  
-- **Try `npx` Command Locally**: `npm run npx`  
-  _(Modify the `npx` script in `package.json` to suit your project requirements.)_
-
-Enjoy coding! 🌸
+| Command | Description |
+|---|---|
+| `npm run build` | Build the library |
+| `npm test` | Run tests |
+| `npm run lint` | Lint and auto-fix |
+| `npm run tsc` | Type check |
+| `npm run npx` | Test your `npx` command locally |
