@@ -14,7 +14,7 @@ import {
 } from '@clack/prompts'
 
 ;(async () => {
-	intro('⭐ Create your ESM Typescript Package')
+	intro('⭐ Create your Typescript Package')
 
 	const projectName = (await text({
 		message: 'Enter project name',
