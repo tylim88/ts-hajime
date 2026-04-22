@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { resolve } from 'node:path'
-import { readFile, writeFile, cp, rm } from 'node:fs/promises'
+import { cp, rm } from 'node:fs/promises'
 import validatePackageName from 'validate-npm-package-name'
 import { execa } from 'execa'
 import {
@@ -58,23 +58,15 @@ import {
 			recursive: true,
 		},
 	)
-	let packageJson = (await readFile(`${destination}/package.json`))
-		.toString()
-		.replaceAll('my-app', projectName)
-	if (!npxOption) {
+
+	if (npxOption) {
+		await cp(`${destination}/package.json.npx`, `${destination}/package.json`)
+	} else {
 		await rm(`${destination}/npx`, { recursive: true })
-		await rm(`${destination}/tsup.config.ts`)
+		await rm(`${destination}/tsup.npx.ts`)
 		await rm(`${destination}/tsconfig.npx.json`)
-		packageJson = packageJson
-			.replaceAll(
-				'"build": "pkgroll --clean-dist && tsup",',
-				'"build": "pkgroll --clean-dist",',
-			)
-			.split('\n')
-			.filter((line) => npxOption || !line.includes('tsx npx'))
-			.join('\n')
 	}
-	await writeFile(`${destination}/package.json`, packageJson)
+	await rm(`${destination}/package.json.npx`)
 	p.advance(3, 'Copy complete!')
 	p.advance(5, 'Installing node modules...')
 	await execa(
