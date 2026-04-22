@@ -17,7 +17,7 @@ import {
 	intro('⭐ Create your ESM Typescript Package')
 
 	const projectName = (await text({
-		message: 'Enter your project name',
+		message: 'Enter project name',
 		placeholder: 'my-app',
 		initialValue: 'my-app',
 		validate: (value) => {
@@ -37,7 +37,7 @@ import {
 	}
 
 	const npxOption = await confirm({
-		message: 'Do you want to setup npx command?',
+		message: 'Setup npx command?',
 	})
 
 	if (isCancel(npxOption)) {
@@ -58,16 +58,23 @@ import {
 			recursive: true,
 		},
 	)
-	if (!npxOption) await rm(`${destination}/npx`, { recursive: true })
-	await writeFile(
-		`${destination}/package.json`,
-		(await readFile(`${destination}/package.json`))
-			.toString()
-			.replaceAll('my-app', projectName)
+	let packageJson = (await readFile(`${destination}/package.json`))
+		.toString()
+		.replaceAll('my-app', projectName)
+	if (!npxOption) {
+		await rm(`${destination}/npx`, { recursive: true })
+		await rm(`${destination}/tsup.config.ts`)
+		await rm(`${destination}/tsconfig.npx.json`)
+		packageJson = packageJson
+			.replaceAll(
+				'"build": "pkgroll --clean-dist && tsup",',
+				'"build": "pkgroll --clean-dist",',
+			)
 			.split('\n')
 			.filter((line) => npxOption || !line.includes('tsx npx'))
-			.join('\n'),
-	)
+			.join('\n')
+	}
+	await writeFile(`${destination}/package.json`, packageJson)
 	p.advance(3, 'Copy complete!')
 	p.advance(5, 'Installing node modules...')
 	await execa(
