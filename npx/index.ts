@@ -48,7 +48,11 @@ import {
 	p.start('Copying template...')
 	const destination = resolve(process.cwd(), projectName)
 	await cp(
-		resolve(import.meta.dirname || __dirname, '../template'),
+		resolve(
+			// this is needed because in local it is esm, in npm it is cjs
+			import.meta.dirname || __dirname,
+			'../template',
+		),
 		destination,
 		{
 			recursive: true,
