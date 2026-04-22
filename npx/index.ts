@@ -78,7 +78,8 @@ import {
 	p.advance(3, 'Copy complete!')
 	p.advance(5, 'Installing node modules...')
 	await execa(
-		`cd ${resolve(process.cwd(), projectName)} && npm run setup && mv .gitignore_ .gitignore && mv biome.jsonc_ biome.jsonc`,
+		// have to rename biome.jsonc because of nested config conflict
+		`cd ${resolve(process.cwd(), projectName)} && npm run setup && mv biome.jsonc_ biome.jsonc`,
 		{
 			shell: true,
 		},
