@@ -15,11 +15,11 @@
 	"files": {
 		"includes": [
 			"**",
-			"!!dist",
-			"!!node_modules",
-			"!!build",
-			"!!coverage",
-			"!!bin"
+			"!!**/dist",
+			"!!**/node_modules",
+			"!!**/build",
+			"!!**/coverage",
+			"!!**/bin"
 		]
 	}
 }
