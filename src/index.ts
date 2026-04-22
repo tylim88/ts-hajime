@@ -66,8 +66,6 @@ import {
 		await rm(`${destination}/tsup.npx.ts`)
 		await rm(`${destination}/tsconfig.npx.json`)
 	}
-	await cp(`${destination}/.gitignore_`, `${destination}/.gitignore`) // npm convert gitignore to npmignore during publish
-	await rm(`${destination}/.gitignore_`)
 	await rm(`${destination}/package.json.npx`)
 	await writeFile(
 		`${destination}/package.json`,
