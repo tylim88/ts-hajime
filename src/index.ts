@@ -35,7 +35,6 @@ import {
 		cancel('Operation cancelled.')
 		process.exit(0)
 	}
-
 	const npxOption = await confirm({
 		message: 'Setup npx command?',
 	})
@@ -66,7 +65,14 @@ import {
 		await rm(`${destination}/tsup.npx.ts`)
 		await rm(`${destination}/tsconfig.npx.json`)
 	}
-	await cp(`${destination}/.npmignore`, `${destination}/.gitignore`) // https://stackoverflow.com/a/79929897/5338829
+	console.log(1)
+
+	await cp(`${destination}/.npmignore`, `${destination}/.gitignore`).catch(
+		() => {
+			// this will throw error in development, but it is fine because .npmignore only exist after downloading from npm
+			// https://stackoverflow.com/a/79929897/5338829
+		},
+	)
 	await rm(`${destination}/.npmignore`)
 	await rm(`${destination}/package.json.npx`)
 	await writeFile(
@@ -75,6 +81,7 @@ import {
 			.toString()
 			.replaceAll('my-package', projectName),
 	)
+	console.log(2)
 	p.advance(3, 'Copy complete!')
 	p.advance(5, 'Installing node modules...')
 	await execa(
@@ -84,6 +91,7 @@ import {
 			shell: true,
 		},
 	)
+	console.log(3)
 	p.stop('Installed!')
 	outro('⭐ All done, enjoy!')
 })()

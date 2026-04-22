@@ -1,7 +1,7 @@
 {
 	"name": "ts-hajime",
 	"description": "Bootstrap a TypeScript npm library in one command.",
-	"version": "0.4.27",
+	"version": "0.4.28",
 	"scripts": {
 		"setup": "rm -rf node_modules && npm i && husky",
 		"prepublishOnly": "npm run build",
@@ -29,6 +29,7 @@
 		"@biomejs/biome": "^2.4.12",
 		"@clack/prompts": "^1.2.0",
 		"@types/fs-extra": "^11.0.4",
+		"@types/node": "^25.6.0",
 		"@types/validate-npm-package-name": "^4.0.2",
 		"@vitest/coverage-v8": "^4.1.5",
 		"execa": "^9.6.1",
@@ -36,7 +37,7 @@
 		"lint-staged": "^16.4.0",
 		"tsup": "^8.5.1",
 		"tsx": "^4.21.0",
-		"typescript": "^5.9.3",
+		"typescript": "^6.0.3",
 		"validate-npm-package-name": "^7.0.2",
 		"vitest": "^4.1.5"
 	},
