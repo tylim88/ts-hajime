@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
 		"noEmit": true,
-		"lib": ["esnext"],
+		"target": "esnext",
+		"lib": ["esnext", "dom", "dom.iterable"],
 		"allowJs": false,
 		"skipLibCheck": true,
 		"strict": true,
@@ -12,6 +13,7 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noFallthroughCasesInSwitch": true,
+		"allowUnreachableCode": false,
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
 		"baseUrl": ".",
