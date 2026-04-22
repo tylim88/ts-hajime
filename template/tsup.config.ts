@@ -4,8 +4,7 @@ export default defineConfig({
 	entry: ['npx/index.ts'],
 	clean: true,
 	minify: true,
-	format: ['esm'],
+	format: ['cjs'],
 	tsconfig: 'tsconfig.npx.json',
 	outDir: 'bin',
-	platform: 'node',
 })

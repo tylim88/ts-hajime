@@ -1,0 +1,12 @@
+# modules
+**/node_modules
+
+# output
+**/dist
+**/bin
+
+# test
+**/coverage
+
+# misc
+**/.DS_Store

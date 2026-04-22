@@ -11,7 +11,7 @@
 		"lint": "npx @biomejs/biome check --write"
 	},
 	"bin": {
-		"my-app": "./bin/index.js"
+		"my-app": "./bin/index.cjs"
 	},
 	"files": [
 		"bin",

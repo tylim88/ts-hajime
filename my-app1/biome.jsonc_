@@ -1,0 +1,25 @@
+{
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"semicolons": "asNeeded"
+		}
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "off"
+			}
+		}
+	},
+	"files": {
+		"includes": [
+			"**",
+			"!!dist",
+			"!!node_modules",
+			"!!build",
+			"!!coverage",
+			"!!bin"
+		]
+	}
+}
