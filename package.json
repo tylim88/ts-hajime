@@ -1,14 +1,14 @@
 {
 	"name": "ts-hajime",
 	"description": "Delightfully bootstraps TypeScript npm libraries.",
-	"version": "0.4.13",
+	"version": "0.4.15",
 	"scripts": {
 		"setup": "rm -rf node_modules && npm i && husky",
 		"prepublishOnly": "npm run build",
-		"build": "pkgroll --clean-dist && tsup",
+		"build": "tsup",
 		"test": "vitest",
 		"lint": "npx @biomejs/biome check --write",
-		"npx": "tsx npx",
+		"npx": "tsx src",
 		"update": "npx npm-check-updates -u && npm i"
 	},
 	"bin": {
@@ -25,19 +25,6 @@
 		]
 	},
 	"type": "module",
-	"main": "./dist/index.cjs",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.cts",
-	"exports": {
-		"require": {
-			"types": "./dist/index.d.cts",
-			"default": "./dist/index.cjs"
-		},
-		"import": {
-			"types": "./dist/index.d.mts",
-			"default": "./dist/index.mjs"
-		}
-	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.12",
 		"@clack/prompts": "^1.2.0",
@@ -47,7 +34,6 @@
 		"execa": "^9.6.1",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.4.0",
-		"pkgroll": "^2.27.0",
 		"tsup": "^8.5.1",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3",

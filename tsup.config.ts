@@ -1,9 +1,10 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-	entry: ['npx/index.ts'],
+	entry: ['src/index.ts'],
 	clean: true,
 	format: ['cjs'],
-	tsconfig: 'tsconfig.npx.json',
 	outDir: 'bin',
+	shims: true,
+	platform: 'node',
 })
