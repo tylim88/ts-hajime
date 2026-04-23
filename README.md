@@ -9,7 +9,7 @@ npx ts-hajime
 ## What you get
 
 - **Biome** for linting and formatting (install the [Biome VSCode extension](https://marketplace.visualstudio.com/items?itemName=biomejs.biome))
-- **tsup** for building — outputs both ESM and CJS
+- **tsdown** for building — outputs both ESM and CJS
 - **vitest** for testing
 - **tsx** for running TypeScript directly
 - Preconfigured `tsconfig.json`, `vitest.config.ts`, `biome.jsonc`, and `package.json`
@@ -22,7 +22,7 @@ npx ts-hajime
 ## Commands
 
 | Command | Description |
-|---|---|
+| --- | --- |
 | `npm run build` | Build the library |
 | `npm test` | Run tests |
 | `npm run lint` | Lint and auto-fix |

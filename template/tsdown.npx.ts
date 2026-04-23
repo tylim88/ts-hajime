@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup'
+import { defineConfig } from 'tsdown'
 
 export default defineConfig({
 	entry: ['npx/index.ts'],
@@ -6,4 +6,5 @@ export default defineConfig({
 	format: ['cjs'],
 	tsconfig: 'tsconfig.npx.json',
 	outDir: 'bin',
+	target: false,
 })

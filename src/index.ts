@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { resolve } from 'node:path'
-import { cp, rm, writeFile, readFile } from 'node:fs/promises'
+import { cp, rename, rm, writeFile, readFile } from 'node:fs/promises'
 import validatePackageName from 'validate-npm-package-name'
 import { execa } from 'execa'
 import {
@@ -59,28 +59,29 @@ import {
 	)
 
 	if (npxOption) {
-		await cp(`${destination}/package.json.npx`, `${destination}/package.json`)
+		await rename(
+			`${destination}/package.json.npx`,
+			`${destination}/package.json`,
+		)
 	} else {
 		await rm(`${destination}/npx`, { recursive: true })
-		await rm(`${destination}/tsup.npx.ts`)
+		await rm(`${destination}/tsdown.npx.ts`)
 		await rm(`${destination}/tsconfig.npx.json`)
+		await rm(`${destination}/package.json.npx`)
 	}
-
-	await cp(`${destination}/.npmignore`, `${destination}/.gitignore`).catch(
+	await rename(`${destination}/.npmignore`, `${destination}/.gitignore`).catch(
 		() => {
 			// this will throw error in development, but it is fine because .npmignore only exist after downloading from npm
 			// https://stackoverflow.com/a/79929897/5338829
 		},
 	)
-	await rm(`${destination}/.npmignore`)
-	await rm(`${destination}/package.json.npx`)
+
 	await writeFile(
 		`${destination}/package.json`,
 		(await readFile(`${destination}/package.json`))
 			.toString()
 			.replaceAll('my-package', projectName),
 	)
-
 	p.advance(3, 'Copy complete!')
 	p.advance(5, 'Installing node modules...')
 	await execa(
@@ -90,7 +91,6 @@ import {
 			shell: true,
 		},
 	)
-
 	p.stop('Installed!')
 	outro('⭐ All done, enjoy!')
 })()

@@ -5,7 +5,7 @@
 		"*.ts": "$(capture).*.ts",
 		"*.cjs": "$(capture).*.cts",
 		"tsconfig.json": "tsconfig.*.json",
-		"tsup.config.ts": "tsup.*.ts",
+		"tsdown.config.ts": "tsdown.*.ts",
 		"README.md": "LICENSE",
 		".gitignore": ".npmignore"
 	},
