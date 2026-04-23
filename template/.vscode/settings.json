@@ -4,6 +4,7 @@
 		"package.json": "package-lock.json",
 		"*.ts": "$(capture).*.ts",
 		"*.cjs": "$(capture).*.cts",
+		"*.mjs": "$(capture).*.mts",
 		"tsconfig.json": "tsconfig.*.json",
 		"tsdown.config.ts": "tsdown.*.ts",
 		"README.md": "LICENSE",
