@@ -1,7 +1,7 @@
 {
 	"name": "ts-hajime",
 	"description": "Bootstrap a TypeScript npm library in one command.",
-	"version": "0.4.32",
+	"version": "0.4.33",
 	"scripts": {
 		"setup": "rm -rf node_modules && npm i && husky",
 		"prepublishOnly": "npm run build",

@@ -5,21 +5,15 @@
 			"semicolons": "asNeeded"
 		}
 	},
-	"assist": {
-		"actions": {
-			"source": {
-				"organizeImports": "off"
-			}
-		}
-	},
 	"files": {
+		"ignoreUnknown": false,
 		"includes": [
 			"**",
-			"!!**/dist",
-			"!!**/node_modules",
-			"!!**/build",
-			"!!**/coverage",
-			"!!**/bin"
+			"!**/dist",
+			"!**/node_modules",
+			"!**/build",
+			"!**/coverage",
+			"!**/bin"
 		]
 	}
 }

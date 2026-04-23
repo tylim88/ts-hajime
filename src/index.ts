@@ -1,18 +1,17 @@
 #!/usr/bin/env node
+import { cp, readFile, rename, rm, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
-import { cp, rename, rm, writeFile, readFile } from 'node:fs/promises'
-import validatePackageName from 'validate-npm-package-name'
-import { execa } from 'execa'
 import {
-	intro,
-	outro,
-	text,
-	confirm,
-	isCancel,
 	cancel,
+	confirm,
+	intro,
+	isCancel,
+	outro,
 	progress,
+	text,
 } from '@clack/prompts'
-
+import { execa } from 'execa'
+import validatePackageName from 'validate-npm-package-name'
 ;(async () => {
 	intro('⭐ Create Your Typescript Package')
 

@@ -7,6 +7,6 @@ export default defineConfig({
 	outDir: 'bin',
 	shims: true,
 	platform: 'node',
-  dts: false,
-  target: false,
+	dts: false,
+	target: false,
 })
