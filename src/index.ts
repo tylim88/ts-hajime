@@ -65,7 +65,6 @@ import {
 		await rm(`${destination}/tsup.npx.ts`)
 		await rm(`${destination}/tsconfig.npx.json`)
 	}
-	console.log(1)
 
 	await cp(`${destination}/.npmignore`, `${destination}/.gitignore`).catch(
 		() => {
@@ -81,7 +80,7 @@ import {
 			.toString()
 			.replaceAll('my-package', projectName),
 	)
-	console.log(2)
+
 	p.advance(3, 'Copy complete!')
 	p.advance(5, 'Installing node modules...')
 	await execa(
@@ -91,7 +90,7 @@ import {
 			shell: true,
 		},
 	)
-	console.log(3)
+
 	p.stop('Installed!')
 	outro('⭐ All done, enjoy!')
 })()
