@@ -59,14 +59,14 @@ import validatePackageName from 'validate-npm-package-name'
 
 	if (npxOption) {
 		await rename(
-			`${destination}/package.json.npx`,
+			`${destination}/package.npx.json`,
 			`${destination}/package.json`,
 		)
 	} else {
 		await rm(`${destination}/npx`, { recursive: true })
 		await rm(`${destination}/tsdown.npx.ts`)
 		await rm(`${destination}/tsconfig.npx.json`)
-		await rm(`${destination}/package.json.npx`)
+		await rm(`${destination}/package.npx.json`)
 	}
 	await rename(`${destination}/.npmignore`, `${destination}/.gitignore`).catch(
 		() => {
@@ -74,7 +74,7 @@ import validatePackageName from 'validate-npm-package-name'
 			// https://stackoverflow.com/a/79929897/5338829
 		},
 	)
-
+	await rename(`${destination}/biome_.jsonc`, `${destination}/biome.jsonc`)
 	await writeFile(
 		`${destination}/package.json`,
 		(await readFile(`${destination}/package.json`))
@@ -85,7 +85,7 @@ import validatePackageName from 'validate-npm-package-name'
 	p.advance(5, 'Installing node modules...')
 	await execa(
 		// have to rename biome.jsonc because of nested config conflict
-		`cd ${resolve(process.cwd(), projectName)} && npm run setup && mv biome.jsonc_ biome.jsonc`,
+		`cd ${resolve(process.cwd(), projectName)} && npm run setup`,
 		{
 			shell: true,
 		},
