@@ -74,7 +74,7 @@ import validatePackageName from 'validate-npm-package-name'
 			// https://stackoverflow.com/a/79929897/5338829
 		},
 	)
-	await rename(`${destination}/biome_.jsonc`, `${destination}/biome.jsonc`)
+	// await rename(`${destination}/biome_.jsonc`, `${destination}/biome.jsonc`)
 	await writeFile(
 		`${destination}/package.json`,
 		(await readFile(`${destination}/package.json`))
