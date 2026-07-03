@@ -1,32 +1,7 @@
 {
   "name": "ts-hajime",
-  "version": "0.5.3",
+  "version": "0.5.7",
   "description": "Bootstrap a TypeScript npm library in one command.",
-  "keywords": [
-    "bootstrap",
-    "library",
-    "scaffold",
-    "starter",
-    "template",
-    "typescript"
-  ],
-  "bugs": {
-    "url": "https://github.com/tylim88/ts-hajime/issues"
-  },
-  "license": "MIT",
-  "author": "tylim",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tylim88/ts-hajime.git"
-  },
-  "bin": {
-    "ts-hajime": "./bin/index.cjs"
-  },
-  "files": [
-    "./bin",
-    "./template",
-    "./template/.gitignore"
-  ],
   "type": "module",
   "scripts": {
     "setup": "rm -rf node_modules && npm i && husky",
@@ -34,7 +9,7 @@
     "build": "tsdown",
     "test": "vitest",
     "lint": "oxlint",
-    "format": "oxfmt --write",
+    "format": "oxfmt",
     "npx": "tsx src",
     "update": "npx npm-check-updates -u && npm i"
   },
@@ -60,5 +35,30 @@
       "npm run lint",
       "npm run format"
     ]
+  },
+  "bin": {
+    "ts-hajime": "./bin/index.cjs"
+  },
+  "files": [
+    "./bin",
+    "./template",
+    "./template/.gitignore"
+  ],
+  "keywords": [
+    "bootstrap",
+    "library",
+    "scaffold",
+    "starter",
+    "template",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/tylim88/ts-hajime/issues"
+  },
+  "license": "MIT",
+  "author": "tylim",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylim88/ts-hajime.git"
   }
 }

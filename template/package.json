@@ -1,14 +1,14 @@
 {
   "name": "my-package",
-  "description": "my-description",
   "version": "0.0.0",
+  "description": "my-description",
   "scripts": {
     "setup": "rm -rf node_modules && npm i && git init && husky",
     "prepublishOnly": "npm run build",
     "build": "tsdown",
     "test": "vitest",
     "lint": "oxlint --fix",
-    "format": "oxfmt --write"
+    "format": "oxfmt"
   },
   "devDependencies": {
     "@types/node": "^26.1.0",
@@ -27,6 +27,16 @@
       "npm run lint"
     ]
   },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/???/???/issues"
+  },
+  "license": "???",
+  "author": "???",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/???/???.git"
+  },
   "files": [
     "dist"
   ],
@@ -44,15 +54,5 @@
         "default": "./dist/index.mjs"
       }
     }
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/???/???/issues"
-  },
-  "license": "???",
-  "author": "???",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/???/???.git"
   }
 }

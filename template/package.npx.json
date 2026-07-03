@@ -10,7 +10,7 @@
     "test": "vitest",
     "npx": "tsx npx",
     "lint": "oxlint",
-    "format": "oxfmt --write ."
+    "format": "oxfmt ."
   },
   "devDependencies": {
     "@clack/prompts": "^1.2.0",
