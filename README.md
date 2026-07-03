@@ -21,10 +21,10 @@ npx ts-hajime
 
 ## Commands
 
-| Command | Description |
-| --- | --- |
-| `npm run build` | Build the library |
-| `npm test` | Run tests |
-| `npm run lint` | Lint and auto-fix |
-| `npm run tsc` | Type check |
-| `npm run npx` | Test your `npx` command locally |
+| Command         | Description                     |
+| --------------- | ------------------------------- |
+| `npm run build` | Build the library               |
+| `npm test`      | Run tests                       |
+| `npm run lint`  | Lint and auto-fix               |
+| `npm run tsc`   | Type check                      |
+| `npm run npx`   | Test your `npx` command locally |

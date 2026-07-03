@@ -1,64 +1,64 @@
 {
-	"name": "ts-hajime",
-	"description": "Bootstrap a TypeScript npm library in one command.",
-	"version": "0.4.36",
-	"scripts": {
-		"setup": "rm -rf node_modules && npm i && husky",
-		"prepublishOnly": "npm i && npm run build",
-		"build": "tsdown",
-		"test": "vitest",
-		"lint": "oxlint",
-		"format": "oxfmt --write .",
-		"npx": "tsx src",
-		"update": "npx npm-check-updates -u && npm i"
-	},
-	"bin": {
-		"ts-hajime": "./bin/index.cjs"
-	},
-	"files": [
-		"./bin",
-		"./template",
-		"./template/.gitignore"
-	],
-	"lint-staged": {
-		"*": [
-			"npm run lint",
-			"npm run format"
-		]
-	},
-	"type": "module",
-	"devDependencies": {
-		"@clack/prompts": "^1.2.0",
-		"@types/fs-extra": "^11.0.4",
-		"@types/node": "^25.6.0",
-		"@types/validate-npm-package-name": "^4.0.2",
-		"@vitest/coverage-v8": "^4.1.5",
-		"execa": "^9.6.1",
-		"husky": "^9.1.7",
-		"lint-staged": "^16.4.0",
-		"oxfmt": "^0.57.0",
-		"oxlint": "^1.72.0",
-		"tsdown": "^0.21.10",
-		"tsx": "^4.21.0",
-		"typescript": "^6.0.3",
-		"validate-npm-package-name": "^7.0.2",
-		"vitest": "^4.1.5"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/tylim88/ts-hajime.git"
-	},
-	"bugs": {
-		"url": "https://github.com/tylim88/ts-hajime/issues"
-	},
-	"author": "tylim",
-	"license": "MIT",
-	"keywords": [
-		"typescript",
-		"bootstrap",
-		"library",
-		"starter",
-		"scaffold",
-		"template"
-	]
+  "name": "ts-hajime",
+  "version": "0.5.3",
+  "description": "Bootstrap a TypeScript npm library in one command.",
+  "keywords": [
+    "bootstrap",
+    "library",
+    "scaffold",
+    "starter",
+    "template",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/tylim88/ts-hajime/issues"
+  },
+  "license": "MIT",
+  "author": "tylim",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylim88/ts-hajime.git"
+  },
+  "bin": {
+    "ts-hajime": "./bin/index.cjs"
+  },
+  "files": [
+    "./bin",
+    "./template",
+    "./template/.gitignore"
+  ],
+  "type": "module",
+  "scripts": {
+    "setup": "rm -rf node_modules && npm i && husky",
+    "prepublishOnly": "npm i && npm run build",
+    "build": "tsdown",
+    "test": "vitest",
+    "lint": "oxlint",
+    "format": "oxfmt --write",
+    "npx": "tsx src",
+    "update": "npx npm-check-updates -u && npm i"
+  },
+  "devDependencies": {
+    "@clack/prompts": "^1.6.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^26.1.0",
+    "@types/validate-npm-package-name": "^4.0.2",
+    "@vitest/coverage-v8": "^4.1.9",
+    "execa": "^9.6.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "oxfmt": "^0.57.0",
+    "oxlint": "^1.72.0",
+    "tsdown": "^0.22.3",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3",
+    "validate-npm-package-name": "^8.0.0",
+    "vitest": "^4.1.9"
+  },
+  "lint-staged": {
+    "*": [
+      "npm run lint",
+      "npm run format"
+    ]
+  }
 }

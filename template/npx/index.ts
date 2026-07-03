@@ -2,11 +2,11 @@
 import { text } from '@clack/prompts'
 
 ;(async () => {
-	const name = (await text({
-		message: 'Enter your name',
-		placeholder: 'Red',
-		initialValue: 'Red',
-	})) as string
+  const name = (await text({
+    message: 'Enter your name',
+    placeholder: 'Red',
+    initialValue: 'Red',
+  })) as string
 
-	console.log(`Hi ${name}!`)
+  console.log(`Hi ${name}!`)
 })()
