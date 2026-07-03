@@ -1,6 +1,6 @@
 {
   "name": "ts-hajime",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "Bootstrap a TypeScript npm library in one command.",
   "type": "module",
   "scripts": {

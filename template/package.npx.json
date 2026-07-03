@@ -9,8 +9,8 @@
     "build": "tsdown && tsdown --config tsdown.npx.ts",
     "test": "vitest",
     "npx": "tsx npx",
-    "lint": "oxlint",
-    "format": "oxfmt ."
+    "lint": "oxlint --fix",
+    "format": "oxfmt"
   },
   "devDependencies": {
     "@clack/prompts": "^1.2.0",
